@@ -34,7 +34,11 @@ _static
 _templates
 
 # Misc
+<<<<<<< HEAD
 .DS_Store
 
 vnpy/app/cta_strategy/strategies/Grid_Restricted_Pos_Strategy.py
 vnpy/app/cta_strategy/strategies/Grid_Strategy.py
+=======
+.DS_Store
+>>>>>>> parent of 4bc8cb49 (add ib)
