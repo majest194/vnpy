@@ -110,6 +110,7 @@ class Exchange(Enum):
     HKSE = "HKSE"           # Hong Kong Stock Exchange
     SGX = "SGX"             # Singapore Global Exchange
     CBOT = "CBT"            # Chicago Board of Trade
+    ECBOT = "ECBOT"            # Chicago Board of Trade
     CBOE = "CBOE"           # Chicago Board Options Exchange
     CFE = "CFE"             # CBOE Futures Exchange
     DME = "DME"             # Dubai Mercantile Exchange

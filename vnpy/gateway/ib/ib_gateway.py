@@ -80,6 +80,8 @@ EXCHANGE_VT2IB = {
     Exchange.ICE: "ICE",
     Exchange.SEHK: "SEHK",
     Exchange.HKFE: "HKFE",
+    Exchange.SGX: "SGX",
+    Exchange.ECBOT: "ECBOT",
     Exchange.CFE: "CFE",
     Exchange.NYSE: "NYSE",
     Exchange.NASDAQ: "NASDAQ",
