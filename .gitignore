@@ -35,3 +35,16 @@ _templates
 
 # Misc
 .DS_Store
+examples/vn_trader一德/demo_script.py
+examples/vn_trader一德/run.py
+examples/vn_trader中信/demo_script.py
+examples/vn_trader中信/run.py
+examples/vn_trader哥方正/demo_script.py
+examples/vn_trader哥方正/run.py
+examples/vn_trader我方正/demo_script.py
+examples/vn_trader我方正/run.py
+examples/vn_trader永安/demo_script.py
+examples/vn_trader永安/run.py
+
+vnpy/app/cta_strategy/strategies/Grid_Restricted_Pos_Strategy.py
+vnpy/app/cta_strategy/strategies/Grid_Strategy.py

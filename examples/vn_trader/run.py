@@ -20,7 +20,7 @@ from vnpy.gateway.ctptest import CtptestGateway
 # from vnpy.gateway.oes import OesGateway
 # from vnpy.gateway.comstar import ComstarGateway
 # from vnpy.gateway.futu import FutuGateway
-# from vnpy.gateway.ib import IbGateway
+from vnpy.gateway.ib import IbGateway
 # from vnpy.gateway.tiger import TigerGateway
 # from vnpy.gateway.tap import TapGateway
 # from vnpy.gateway.da import DaGateway
@@ -58,8 +58,8 @@ from vnpy.app.market_radar import MarketRadarApp
 from vnpy.app.chart_wizard import ChartWizardApp
 # from vnpy.app.rpc_service import RpcServiceApp
 # from vnpy.app.excel_rtd import ExcelRtdApp
-# from vnpy.app.data_manager import DataManagerApp
-# from vnpy.app.data_recorder import DataRecorderApp
+from vnpy.app.data_manager import DataManagerApp
+from vnpy.app.data_recorder import DataRecorderApp
 # from vnpy.app.risk_manager import RiskManagerApp
 # from vnpy.app.portfolio_manager import PortfolioManagerApp
 # from vnpy.app.paper_account import PaperAccountApp
@@ -89,7 +89,7 @@ def main():
     # main_engine.add_gateway(OesGateway)
     # main_engine.add_gateway(ComstarGateway)
     # main_engine.add_gateway(FutuGateway)
-    # main_engine.add_gateway(IbGateway)
+    main_engine.add_gateway(IbGateway)
     # main_engine.add_gateway(TigerGateway)
     # main_engine.add_gateway(TapGateway)
     # main_engine.add_gateway(DaGateway)
@@ -122,13 +122,13 @@ def main():
     main_engine.add_app(AlgoTradingApp)
     main_engine.add_app(OptionMasterApp)
     main_engine.add_app(PortfolioStrategyApp)
-    main_engine.add_app(ScriptTraderApp)
+    # main_engine.add_app(ScriptTraderApp)
     main_engine.add_app(MarketRadarApp)
     main_engine.add_app(ChartWizardApp)
     # main_engine.add_app(RpcServiceApp)
     # main_engine.add_app(ExcelRtdApp)
-    # main_engine.add_app(DataManagerApp)
-    # main_engine.add_app(DataRecorderApp)
+    main_engine.add_app(DataManagerApp)
+    main_engine.add_app(DataRecorderApp)
     # main_engine.add_app(RiskManagerApp)
     # main_engine.add_app(PortfolioManagerApp)
     # main_engine.add_app(PaperAccountApp)
