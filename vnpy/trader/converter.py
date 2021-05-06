@@ -264,7 +264,7 @@ class PositionHolding:
 
             req_yd = copy(req)
             req_yd.offset = Offset.CLOSEYESTERDAY
-            req_yd.volume = req.volume - td_available
+            req_yd.volume = req.volume - max(0, td_available)
             req_list.append(req_yd)
 
             return req_list

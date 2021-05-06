@@ -110,6 +110,7 @@ class Exchange(Enum):
     HKSE = "HKSE"           # Hong Kong Stock Exchange
     SGX = "SGX"             # Singapore Global Exchange
     CBOT = "CBT"            # Chicago Board of Trade
+    NYBOT = "NYBOT"            # Chicago Board of Trade
     ECBOT = "ECBOT"            # Chicago Board of Trade
     CBOE = "CBOE"           # Chicago Board Options Exchange
     CFE = "CFE"             # CBOE Futures Exchange
@@ -154,6 +155,8 @@ class Interval(Enum):
     Interval of bar data.
     """
     MINUTE = "1m"
+    MINUTE_5 = "5m"
+    MINUTE_30 = "30m"
     HOUR = "1h"
     DAILY = "d"
     WEEKLY = "w"

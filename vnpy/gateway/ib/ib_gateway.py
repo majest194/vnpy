@@ -81,6 +81,7 @@ EXCHANGE_VT2IB = {
     Exchange.SEHK: "SEHK",
     Exchange.HKFE: "HKFE",
     Exchange.SGX: "SGX",
+    Exchange.NYBOT: "NYBOT",
     Exchange.ECBOT: "ECBOT",
     Exchange.CFE: "CFE",
     Exchange.NYSE: "NYSE",
@@ -147,6 +148,8 @@ ACCOUNTFIELD_IB2VT = {
 
 INTERVAL_VT2IB = {
     Interval.MINUTE: "1 min",
+    Interval.MINUTE_5: "5 min",
+    Interval.MINUTE_30: "30 min",
     Interval.HOUR: "1 hour",
     Interval.DAILY: "1 day",
 }
@@ -620,7 +623,6 @@ class IbApi(EWrapper):
         """
         dt = datetime.strptime(ib_bar.date, "%Y%m%d %H:%M:%S")
         dt = self.local_tz.localize(dt)
-
         bar = BarData(
             symbol=self.history_req.symbol,
             exchange=self.history_req.exchange,
@@ -790,7 +792,6 @@ class IbApi(EWrapper):
             bar_type = "MIDPOINT"
         else:
             bar_type = "TRADES"
-
         self.client.reqHistoricalData(
             self.reqid,
             ib_contract,
@@ -798,12 +799,12 @@ class IbApi(EWrapper):
             duration,
             bar_size,
             bar_type,
-            1,
+            #本来是1，0，修改成0,1
             0,
+            1,
             False,
             []
         )
-
         self.history_condition.acquire()    # Wait for async data return
         self.history_condition.wait()
         self.history_condition.release()
@@ -811,7 +812,6 @@ class IbApi(EWrapper):
         history = self.history_buf
         self.history_buf = []       # Create new buffer list
         self.history_req = None
-
         return history
 
     def load_contract_data(self):
